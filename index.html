@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Birthday Surprise | Falak ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SCENE 1: PASSWORD -->
+    <section id="scene1" class="scene active">
+        <div class="glass-card">
+            <div class="lock-icon">🔒</div>
+            <h1>Private Birthday Surprise ❤️</h1>
+            <div class="input-group">
+                <input type="password" id="passwordInput" placeholder="Enter Password...">
+                <p id="errorMsg" class="error-text">Incorrect! Hint: Falak123</p>
+            </div>
+            <button onclick="checkPassword()" class="btn-gold">Unlock Magic</button>
+        </div>
+    </section>
+
+    <!-- SCENE 2: WELCOME -->
+    <section id="scene2" class="scene">
+        <div class="welcome-container">
+            <h1 class="title">Happy Birthday Falak ❤️</h1>
+            <div class="teddy-row">
+                <div class="teddy-box">
+                    <img src="https://images.unsplash.com/photo-1559466273-d95e72debaf8?w=400" alt="Teddy Me">
+                    <p>Me</p>
+                </div>
+                <div class="cake-main-box">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400" alt="Cake">
+                </div>
+                <div class="teddy-box">
+                    <img src="https://images.unsplash.com/photo-1555448049-80bc2980a320?w=400" alt="Teddy Falak">
+                    <p>Falak ❤️</p>
+                </div>
+            </div>
+            <button onclick="showScene('scene3')" class="btn-primary">Open Surprise</button>
+        </div>
+    </section>
+
+    <!-- SCENE 3: HEART GAME -->
+    <section id="scene3" class="scene">
+        <div class="game-ui">
+            <h2>Catch 10 Hearts for Falak! ❤️</h2>
+            <div class="score-board">Score: <span id="score">0</span> / 10</div>
+        </div>
+        <div id="game-area"></div>
+    </section>
+
+    <!-- SCENE 4: CAKE CUTTING -->
+    <section id="scene4" class="scene">
+        <div class="cake-cutting-container">
+            <h2>Cut the Birthday Cake 🎂</h2>
+            <div class="cake-stage">
+                <div class="candle-flames">
+                    <span>🔥</span><span>🔥</span><span>🔥</span><span>🔥</span><span>🔥</span>
+                </div>
+                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600" id="cakeImg" alt="Real Cake">
+                <div id="knife" class="knife">🔪</div>
+            </div>
+            <button id="cutBtn" onclick="cutTheCake()" class="btn-gold">Cut Cake</button>
+        </div>
+    </section>
+
+    <!-- SCENE 5: PROMISE -->
+    <section id="scene5" class="scene">
+        <div class="glass-card">
+            <p class="promise-text">Promise me you'll always keep smiling and stay happy. ❤️</p>
+            <button onclick="showScene('scene6')" class="btn-gold">I Promise 💍</button>
+        </div>
+    </section>
+
+    <!-- SCENE 6: LOVE SCREEN -->
+    <section id="scene6" class="scene">
+        <h1 class="big-love">I LOVE YOU ❤️</h1>
+        <h3 class="sub-love">Happy Birthday Falak ❤️</h3>
+        <button onclick="showScene('scene7')" class="btn-primary">Read My Letter</button>
+    </section>
+
+    <!-- SCENE 7: LOVE LETTER -->
+    <section id="scene7" class="scene">
+        <div class="letter-paper">
+            <div id="typewriter" class="letter-text"></div>
+            <button id="replayBtn" style="display:none;" onclick="location.reload()" class="btn-gold">Play Again 🔄</button>
+        </div>
+    </section>
+
+    <div id="confetti-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
